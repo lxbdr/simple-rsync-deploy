@@ -5,7 +5,7 @@
 - Dry run
 
 # WARNING
-The script will prompt for a dry run and running the actual command. The command has the `--delete` flag to sync the contents which will delete files on remote.
+The script will prompt for a dry run and before executing the actual command. The command has the `--delete` flag to sync the contents, which will delete files on remote not present in the local directory.
 Make sure to double check all paths before running this. Deleted files cannot or not easily be restored.
 
 ## Installation
