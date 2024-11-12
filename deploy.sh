@@ -11,12 +11,13 @@ else
   source .deploy.env
 fi
 
-# require a .deployignore 
+# require a .deployignore
 if [ ! -f .deployignore ]; then
   echo "Please create a .deployignore file with at least following content:"
   echo ".deploy.env"
   echo ".deployignore"
   echo "deploy.sh"
+  echo ".git"
   echo "- Any other patterns which are recognized by rsync for --exclude -"
   echo "Consider adding the file to .gitignore."
   exit 1
@@ -47,7 +48,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "Dry run finished"
 fi
 
-read -p "Are you sure you want to deploy? " -n 1 -r
+read -p "Are you sure you want to deploy? (Confirm with Y) " -n 1 -r
 echo # move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # do dangerous stuff
