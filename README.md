@@ -27,4 +27,6 @@ deploy.sh
 .env
 ```
 
+Consider adding `deploy.sh`, `.deployignore` and `.deploy.env` to `.gitignore`.
+
 Run with `./deploy.sh`
