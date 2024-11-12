@@ -26,3 +26,5 @@ deploy.sh
 .git
 .env
 ```
+
+Run with `./deploy.sh`
